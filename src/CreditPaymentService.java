@@ -1,10 +1,10 @@
 public class CreditPaymentService {
-    public int calculate(int loanSum, double Percent, int totalMonths) {
+    public int calculate(int loanSum, double percent, int totalMonths) {
 
-        double a = 1 + (Percent / 100 / 12);
+        double a = 1 + (percent / 100 / 12);
         double b = Math.pow(a, totalMonths);
 
-        int annuityPayment = (int) (loanSum * (Percent / 100 / 12) * b / (b - 1));
+        int annuityPayment = (int) ((loanSum * percent / 100 / 12) * b / (b - 1));
         return annuityPayment;
     }
 }
